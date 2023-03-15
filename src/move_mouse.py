@@ -34,30 +34,31 @@ class Key():
         self.scan_code = 0
 
 
-x_size, y_size = pyautogui.size()
+if __name__ == '__main__':
+    x_size, y_size = pyautogui.size()
 
-DURATION = 2.0
-MARGIN = 10 # MAX: 50% da resolucao vertical (pixels)
-SLEEP = 1.0
-STOP_KEY = 'space'
+    DURATION = 2.0
+    MARGIN = 10 # MAX: 50% da resolucao vertical (pixels)
+    SLEEP = 1.0
+    STOP_KEY = 'space'
 
-key = Key()
+    key = Key()
 
-# Move o cursor do mouse infinitamente, até que a tecla de stop seja pressionada
-running = True
-while running:
+    # Move o cursor do mouse infinitamente, até que a tecla de stop seja pressionada
+    running = True
+    while running:
 
-    if key.name:
-        key.clear()
+        if key.name:
+            key.clear()
 
-    # random para coordenadas aleatórias
-    x = random.randint(MARGIN, x_size-MARGIN)
-    y = random.randint(MARGIN, y_size-MARGIN)
-    pyautogui.moveTo(x, y, DURATION)
+        # random para coordenadas aleatórias
+        x = random.randint(MARGIN, x_size-MARGIN)
+        y = random.randint(MARGIN, y_size-MARGIN)
+        pyautogui.moveTo(x, y, DURATION)
 
-    # Move o cursor do mouse para as coordenadas
-    pyautogui.PAUSE = SLEEP
+        # Move o cursor do mouse para as coordenadas
+        pyautogui.PAUSE = SLEEP
 
-    keyboard.on_press(key.get)
-    if key.name == STOP_KEY:
-        running = False
+        keyboard.on_press(key.get)
+        if key.name == STOP_KEY:
+            running = False
