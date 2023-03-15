@@ -41,14 +41,14 @@ MARGIN = 10 # MAX: 50% da resolucao vertical (pixels)
 SLEEP = 1.0
 STOP_KEY = 'space'
 
-tecla = Key()
+key = Key()
 
 # Move o cursor do mouse infinitamente, até que a tecla de stop seja pressionada
 running = True
 while running:
 
-    if tecla.name:
-        tecla.clear()
+    if key.name:
+        key.clear()
 
     # random para coordenadas aleatórias
     x = random.randint(MARGIN, x_size-MARGIN)
@@ -58,6 +58,6 @@ while running:
     # Move o cursor do mouse para as coordenadas
     pyautogui.PAUSE = SLEEP
 
-    keyboard.on_press(tecla.get)
-    if tecla.name == STOP_KEY:
+    keyboard.on_press(key.get)
+    if key.name == STOP_KEY:
         running = False
