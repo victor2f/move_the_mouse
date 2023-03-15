@@ -1,2 +1,2 @@
 
-pyinstaller --onefile --windowed --icon="./img/mouse-cursor.ico" src\move_mouse.py 
+pyinstaller --onefile --windowed --icon="./img/mouse.ico" src\move_mouse.py 
