@@ -10,14 +10,13 @@ class Key():
     """Classe que faz o tratamento da tecla pressionada
     
     metodos:
-        get: recebe o callback da funcao 'on_press' e
+        - `get`: recebe o callback da funcao 'on_press' e
         armazena nome e codigo da tecla pressionada.
-            ** nao utiliza argumento
-        clear: limpa as variaveis nome e codigo.
-            ** necessario chamar a funcao
+        - `clear`: limpa as variaveis nome e codigo.
+    
     atributos:
-        name: letra ou caracter pressionado
-        scan_code: codigo de varredura, posicao fisica da
+        - `name`: letra ou caracter pressionado
+        - `scan_code`: codigo de varredura, posicao fisica da
         tecla no teclado.
     """
     
